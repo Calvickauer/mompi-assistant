@@ -1,0 +1,64 @@
+/* styles/base.qss */
+
+QWidget {
+    background-color: #121212;
+    font-family: 'Segoe UI', sans-serif;
+    color: #E0E0E0;
+    font-size: 14px;
+}
+
+/* Chat Bubbles */
+#userBubble {
+    background-color: #1565C0;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+#assistantBubble {
+    background-color: #2E7D32;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #2D9CDB;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+/* Chat Input */
+#chatInput {
+    background-color: #1E1E1E;
+    color: white;
+    border: 2px solid #64B5F6;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+/* Weather */
+#weatherLabel {
+    color: #64B5F6;
+    font-size: 16px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #64B5F6;
+}
+
+/* Notes */
+#notesArea {
+    background-color: #1E1E1E;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
