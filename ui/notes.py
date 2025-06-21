@@ -21,11 +21,20 @@ class NotesScreen(QWidget):
 
         self.load_notes()
 
+    def _notes_path(self):
+        """Return the path to the notes file inside the data directory."""
+        return os.path.join("data", "notes.txt")
+
     def load_notes(self):
-        if os.path.exists("notes.txt"):
-            with open("notes.txt", "r") as f:
-                self.notes_box.setText(f.read())
+        path = self._notes_path()
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        if not os.path.exists(path):
+            open(path, "a").close()
+        with open(path, "r") as f:
+            self.notes_box.setText(f.read())
 
     def save_notes(self):
-        with open("notes.txt", "w") as f:
+        path = self._notes_path()
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w") as f:
             f.write(self.notes_box.toPlainText())
